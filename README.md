@@ -22,6 +22,15 @@ request.get('/an-endpoint')
   }, function(error) {
     console.log(error);
   });
+  
+// Or, using .catch()
+request.get('/an-endpoint')
+  .then(function(res) {
+    console.log(res);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
 ```
 
 To generate a promise without registering any callbacks (e.g. when returning a promise from within a library), call `.promise()` instead.
