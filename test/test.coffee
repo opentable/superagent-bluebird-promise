@@ -1,11 +1,10 @@
 chai = require 'chai'
 expect = chai.expect
 sinon = require 'sinon'
-Promise = require 'bluebird'
+Promise = require 'es6-promise'
 _ = require 'underscore'
 Interfake = require('interfake')
 interfake = new Interfake()
-
 interfake.get('/good').body({message: 'ok'})
 interfake.get('/bad').status(400).body({error: 'not ok'})
 interfake.get('/not-found').status(404).body({error: 'not ok'})

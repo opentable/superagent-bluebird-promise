@@ -1,33 +1,33 @@
 {
-  "name": "superagent-bluebird-promise",
-  "description": "Add promise support to superagent using Bluebird",
-  "version": "2.0.1",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "superagent-es6-promise",
+  "description": "Add promise support to superagent using es6-promise; Port of superagent-bluebirb-promise",
+  "version": "0.0.1",
+  "author": "Noah Burney <nburney@opentable.com>",
   "bugs": {
-    "url": "https://github.com/KyleAMathews/superagent-bluebird-promise/issues"
+    "url": "https://github.com/opentable/superagent-es6-promise/issues"
   },
-  "homepage": "https://github.com/KyleAMathews/superagent-bluebird-promise",
+  "homepage": "https://github.com/opentable/superagent-es6-promise",
   "keywords": [
     "superagent",
     "promise",
-    "bluebird"
+    "es6-promise"
   ],
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "bluebird": "*",
+    "es6-promise": "*",
     "superagent": "*"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KyleAMathews/superagent-bluebird-promise.git"
+    "url": "https://github.com/opentable/superagent-es6-promise.git"
   },
   "scripts": {
     "test-watch": "NODE_ENV=test node_modules/.bin/mocha -w --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter",
     "test": "node_modules/.bin/coffeelint test/* & jshint *.json *.js & NODE_ENV=test node_modules/.bin/mocha --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter"
   },
   "devDependencies": {
-    "bluebird": "^2.9.24",
+    "es6-promise": "^2.1.0",
     "chai": "^2.2.0",
     "coffee-script": "^1.9.2",
     "coffeelint": "^1.9.3",

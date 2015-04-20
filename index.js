@@ -1,8 +1,8 @@
 // From https://gist.github.com/epeli/11209665
 
-var Promise = require("bluebird");
+var Promise = require("es6-promise");
 
-// So you can `var request = require("superagent-bluebird-promise")`
+// So you can `var request = require("superagent-es6-promise")`
 var superagent = module.exports = require("superagent");
 var Request = superagent.Request;
 
@@ -28,7 +28,7 @@ SuperagentPromiseError.prototype.constructor = SuperagentPromiseError;
  * Call .promise() to return promise for the request
  *
  * @method then
- * @return {Bluebird.Promise}
+ * @return {Promise}
  */
 Request.prototype.promise = function() {
   var req = this;
@@ -49,11 +49,6 @@ Request.prototype.promise = function() {
           resolve(res);
         }
       });
-    })
-    .cancellable()
-    ['catch'](Promise.CancellationError, function(err) {
-      req.abort();
-      throw err;
     });
 };
 
@@ -66,7 +61,7 @@ Request.prototype.promise = function() {
  * @method then
  * @param {function} [onFulfilled]
  * @param {function} [onRejected]
- * @return {Bluebird.Promise}
+ * @return {Promise}
  */
 Request.prototype.then = function() {
   var promise = this.promise();
