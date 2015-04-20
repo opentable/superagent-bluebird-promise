@@ -1,6 +1,6 @@
 // From https://gist.github.com/epeli/11209665
 
-var Promise = require("es6-promise");
+var Promise = require("es6-promise").Promise;
 
 // So you can `var request = require("superagent-es6-promise")`
 var superagent = module.exports = require("superagent");
